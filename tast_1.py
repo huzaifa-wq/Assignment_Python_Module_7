@@ -1,14 +1,18 @@
+seasons = ("winter", "spring", "summer", "autumn")
 
 
-import mysql.connector
+month_number = int(input("Enter the number of months (1-12): "))
 
-connection = mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='huzaifa',
-         user='huzaifa',
-         password='huzaifa',
-         autocommit=True
-         )
+if month_number in (12, 1, 2):
+    print(f"month number {month_number} comes in {seasons[0]}")
+elif month_number in (3,4,5):
+    print(f"month number {month_number} comes in {seasons[1]}")
+elif month_number in (6,7,8):
+    print(f"month number {month_number} comes in {seasons[2]}")
+elif month_number in (9,10,11):
+    print(f"month number {month_number} comes in {seasons[3]}")
+else:
+    print("invalid input")
+
 
 
